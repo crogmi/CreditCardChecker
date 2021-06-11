@@ -24,11 +24,44 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+function validatecred(arr) {
+  // Establish the length to check every other digit and the accumulator
+  const length = arr.length - 1;
+  let sum = 0;
+  // Iterate through arr 
+  for (let i = arr.length - 1; i >= 0; i--) {
+        // Check index position relative to the check digit
+        // If index position is even numbers away from check digit, add the digit
+        if (length % 2 === i % 2) {
+            sum += arr[i];
+        } else {
+        // If index position is odd numbers away from the check digit, add the digit * 2, unless the figure is above 9, then add (digit * 2) - 9
+            let temp = arr[i] * 2;
+            if (temp > 9) {
+                sum += temp - 9;
+            } else {
+                sum += temp;
+          }
+      }
+  }
+  // Return true if sum modulo 10 is 0
+  return sum % 10 === 0 ? true : false;
+}
 
+function findInvalidCards(arr) {
+    // Filters nested array using validatecred function
+    return arr.filter(x => !validatecred(x));
+}
 
-
-
-
-
+function idInvalidCardCompanies(invalid) {
+    const company = {
+        3: 'Amex (American Express)',
+        4: 'Visa',
+        5: 'Mastercard',
+        6: 'Discover'
+    }
+    const arr = invalid.map(x => company[x[0]]);
+    return [...new Set(arr)];
+}
 
 
