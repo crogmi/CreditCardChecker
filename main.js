@@ -48,10 +48,20 @@ function validatecred(arr) {
   return sum % 10 === 0 ? true : false;
 }
 
+// Check functionality of validatecred
+console.log(validatecred(valid1)); // Should print true
+console.log(validatecred(invalid1)); // Should print false
+
+
 function findInvalidCards(arr) {
     // Filters nested array using validatecred function
     return arr.filter(x => !validatecred(x));
 }
+
+//Check functionality of findInvalidCards
+console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5])); // Should not print anything
+console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5])); // Should print all 5 credit cards
+
 
 function idInvalidCardCompanies(invalid) {
     const company = {
@@ -64,4 +74,12 @@ function idInvalidCardCompanies(invalid) {
     return [...new Set(arr)];
 }
 
+//Check functionality of idInvalidCardCompanies
+console.log(idInvalidCardCompanies(findInvalidCards([valid1, valid2, valid3, valid4, valid5]))); // Should not print anything
+console.log(idInvalidCardCompanies(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5]))) // Should print one of each company
+
+// To update with function to correct invalid credit cards
+function correct () {
+
+}
 
