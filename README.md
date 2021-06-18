@@ -6,8 +6,8 @@
 - [Features](#features)
 - [Project Status](#project-status)
 - [Room for Improvement](#room-for-improvement)
-- [Acknowledgements] (#acknowledgements)
-- [Contact] (#contact)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
 ## General Information
 
