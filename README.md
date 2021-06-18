@@ -2,14 +2,14 @@
 
 ## Table of contents
 
-- [General information] (#general-info)
-- [Features] (#features)
-- [Project Status] (#project-status)
-- [Room for improvement] (#room-for-improvement)
+- [General Information](#general-information)
+- [Features](#features)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
 - [Acknowledgements] (#acknowledgements)
 - [Contact] (#contact)
 
-## General information
+## General Information
 
 Credit Card Checker receives a nested array of credit card numbers and identifies companies that have issued invalid credit card numbers.
 
@@ -22,7 +22,7 @@ Credit Card Checker receives a nested array of credit card numbers and identifie
 
 Credit Card Checker is functional, but will receive periodic updates to improve and increase its functionality.
 
-## Room for improvement
+## Room for Improvement
 
 - Convert invalid credit cards into valid ones.
 
